@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Dropdowns and Tooltips</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+        }
+
+        h1 {
+            background-color: #263b64;
+            color: white;
+            padding: 30px;
+        }
+
+        ul {
+            list-style: none;
+            background-color: #333;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            background-color: #2196f3;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown a {
+            display: block;
+            text-align: left;
+        }
+
+        li:hover .dropdown {
+            display: block;
+        }
+
+        .content {
+            background-color: white;
+            width: 70%;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            background-color: #2196f3;
+            color: white;
+            padding: 15px 25px;
+            margin: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .tooltip .text {
+            visibility: hidden;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+        }
+
+        .tooltip:hover .text {
+            visibility: visible;
+        }
+
+        footer {
+            background-color: #263b64;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Dropdowns and Tooltips</h1>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+
+        <li>
+            <a href="#">Services ▼</a>
+
+            <div class="dropdown">
+                <a href="#">Web Design</a>
+                <a href="#">Graphic Design</a>
+                <a href="#">Programming</a>
+            </div>
+        </li>
+
+        <li>
+            <a href="#">About ▼</a>
+
+            <div class="dropdown">
+                <a href="#">Our Team</a>
+                <a href="#">Our Story</a>
+            </div>
+        </li>
+
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="content">
+
+        <h2>Welcome to My Website!</h2>
+
+        <p>
+            This is my CSS Dropdowns and Tooltips project.
+        </p>
+
+        <h2>Move your mouse over the buttons!</h2>
+
+        <div class="tooltip">
+            HTML
+            <span class="text">
+                HTML creates web pages.
+            </span>
+        </div>
+
+        <div class="tooltip">
+            CSS
+            <span class="text">
+                CSS styles web pages.
+            </span>
+        </div>
+
+        <div class="tooltip">
+            JavaScript
+            <span class="text">
+                JavaScript adds interaction.
+            </span>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Created by Me | HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
